@@ -1,0 +1,167 @@
+﻿<Window x:Class="MultiFilterSynth.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultiFilterSynth"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0">Frequency</Label>
+        <Label Grid.Row="0" Grid.Column="1">Volume</Label>
+        <Label Grid.Row="0" Grid.Column="2">Speed</Label>
+        <!--<TextBox Grid.Row="1" Grid.Column="2" Text="{Binding ElementName=Slider1, Path=Value, UpdateSourceTrigger=PropertyChanged}"></TextBox>-->
+        <!-- Row one -->
+        <Slider Maximum="100" Grid.Row="1" Grid.Column="0" TickFrequency="5" Name="Slider1" ValueChanged="Slider1_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="1" Grid.Column="1" TickFrequency="5" Name="VolSlider1" ValueChanged="VolSlider1_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="1" Grid.Column="2" TickFrequency="5" Name="SeqSlider1" ValueChanged="SeqSlider1_ValueChanged"/>
+
+        <Button Grid.Row="1" Grid.Column="3" Width="40" Height="10" Name="Button_S_1" Click="SequencerButtons_Click"></Button>
+        <Button Grid.Row="1" Grid.Column="4" Width="40" Height="10" Name="Button_1_0" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="1" Grid.Column="5" Width="40" Height="10" Name="Button_1_1" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="1" Grid.Column="6" Width="40" Height="10" Name="Button_1_2" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="1" Grid.Column="7" Width="40" Height="10" Name="Button_1_3" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="1" Grid.Column="8" Width="40" Height="10" Name="Button_1_4" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="1" Grid.Column="9" Width="40" Height="10" Name="Button_1_5" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="1" Grid.Column="10" Width="40" Height="10" Name="Button_1_6" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="1" Grid.Column="11" Width="40" Height="10" Name="Button_1_7" Click="DestinationButtons_Click"></Button>
+
+        <!-- Row Two-->
+        <Slider Maximum="100" Grid.Row="2" Grid.Column="0" TickFrequency="5" Name="Slider2" ValueChanged="Slider2_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="2" Grid.Column="1" TickFrequency="5" Name="VolSlider2" ValueChanged="VolSlider2_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="2" Grid.Column="2" TickFrequency="5" Name="SeqSlider2" ValueChanged="SeqSlider2_ValueChanged"/>
+
+        <Button Grid.Row="2" Grid.Column="3" Width="40" Height="10" Name="Button_S_2" Click="SequencerButtons_Click"></Button>
+        <Button Grid.Row="2" Grid.Column="4" Width="40" Height="10" Name="Button_2_0" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="2" Grid.Column="5" Width="40" Height="10" Name="Button_2_1" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="2" Grid.Column="6" Width="40" Height="10" Name="Button_2_2" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="2" Grid.Column="7" Width="40" Height="10" Name="Button_2_3" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="2" Grid.Column="8" Width="40" Height="10" Name="Button_2_4" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="2" Grid.Column="9" Width="40" Height="10" Name="Button_2_5" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="2" Grid.Column="10" Width="40" Height="10" Name="Button_2_6" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="2" Grid.Column="11" Width="40" Height="10" Name="Button_2_7" Click="DestinationButtons_Click"></Button>
+
+        <!-- Row three-->
+        <Slider Maximum="100" Grid.Row="3" Grid.Column="0" TickFrequency="5" Name="Slider3" ValueChanged="Slider3_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="3" Grid.Column="1" TickFrequency="5" Name="VolSlider3" ValueChanged="VolSlider3_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="3" Grid.Column="2" TickFrequency="5" Name="SeqSlider3" ValueChanged="SeqSlider3_ValueChanged"/>
+
+        <Button Grid.Row="3" Grid.Column="3" Width="40" Height="10" Name="Button_S_3" Click="SequencerButtons_Click"></Button>
+        <Button Grid.Row="3" Grid.Column="4" Width="40" Height="10" Name="Button_3_0" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="3" Grid.Column="5" Width="40" Height="10" Name="Button_3_1" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="3" Grid.Column="6" Width="40" Height="10" Name="Button_3_2" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="3" Grid.Column="7" Width="40" Height="10" Name="Button_3_3" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="3" Grid.Column="8" Width="40" Height="10" Name="Button_3_4" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="3" Grid.Column="9" Width="40" Height="10" Name="Button_3_5" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="3" Grid.Column="10" Width="40" Height="10" Name="Button_3_6" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="3" Grid.Column="11" Width="40" Height="10" Name="Button_3_7" Click="DestinationButtons_Click"></Button>
+
+        <!-- Row four-->
+        <Slider Maximum="100" Grid.Row="4" Grid.Column="0" TickFrequency="5" Name="Slider4" ValueChanged="Slider4_ValueChanged_1"/>
+        <Slider Maximum="100" Grid.Row="4" Grid.Column="1" TickFrequency="5" Name="VolSlider4" ValueChanged="VolSlider4_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="4" Grid.Column="2" TickFrequency="5" Name="SeqSlider4" ValueChanged="SeqSlider4_ValueChanged"/>
+
+        <Button Grid.Row="4" Grid.Column="3" Width="40" Height="10" Name="Button_S_4" Click="SequencerButtons_Click"></Button>
+        <Button Grid.Row="4" Grid.Column="4" Width="40" Height="10" Name="Button_4_0" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="4" Grid.Column="5" Width="40" Height="10" Name="Button_4_1" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="4" Grid.Column="6" Width="40" Height="10" Name="Button_4_2" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="4" Grid.Column="7" Width="40" Height="10" Name="Button_4_3" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="4" Grid.Column="8" Width="40" Height="10" Name="Button_4_4" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="4" Grid.Column="9" Width="40" Height="10" Name="Button_4_5" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="4" Grid.Column="10" Width="40" Height="10" Name="Button_4_6" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="4" Grid.Column="11" Width="40" Height="10" Name="Button_4_7" Click="DestinationButtons_Click"></Button>
+
+        <!-- Row five-->
+        <Slider Maximum="100" Grid.Row="5" Grid.Column="0" TickFrequency="5" Name="Slider5" ValueChanged="Slider5_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="5" Grid.Column="1" TickFrequency="5" Name="VolSlider5" ValueChanged="VolSlider5_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="5" Grid.Column="2" TickFrequency="5" Name="SeqSlider5" ValueChanged="SeqSlider5_ValueChanged"/>
+
+        <Button Grid.Row="5" Grid.Column="3" Width="40" Height="10" Name="Button_S_5" Click="SequencerButtons_Click"></Button>
+        <Button Grid.Row="5" Grid.Column="4" Width="40" Height="10" Name="Button_5_0" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="5" Grid.Column="5" Width="40" Height="10" Name="Button_5_1" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="5" Grid.Column="6" Width="40" Height="10" Name="Button_5_2" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="5" Grid.Column="7" Width="40" Height="10" Name="Button_5_3" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="5" Grid.Column="8" Width="40" Height="10" Name="Button_5_4" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="5" Grid.Column="9" Width="40" Height="10" Name="Button_5_5" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="5" Grid.Column="10" Width="40" Height="10" Name="Button_5_6" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="5" Grid.Column="11" Width="40" Height="10" Name="Button_5_7" Click="DestinationButtons_Click"></Button>
+
+        <!-- row six -->
+        <Slider Maximum="100" Grid.Row="6" Grid.Column="0" TickFrequency="5" Name="Slider6" ValueChanged="Slider6_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="6" Grid.Column="1" TickFrequency="5" Name="VolSlider6" ValueChanged="VolSlider6_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="6" Grid.Column="2" TickFrequency="5" Name="SeqSlider6" ValueChanged="SeqSlider6_ValueChanged"/>
+
+        <Button Grid.Row="6" Grid.Column="3" Width="40" Height="10" Name="Button_S_6" Click="SequencerButtons_Click"></Button>
+        <Button Grid.Row="6" Grid.Column="4" Width="40" Height="10" Name="Button_6_0" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="6" Grid.Column="5" Width="40" Height="10" Name="Button_6_1" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="6" Grid.Column="6" Width="40" Height="10" Name="Button_6_2" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="6" Grid.Column="7" Width="40" Height="10" Name="Button_6_3" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="6" Grid.Column="8" Width="40" Height="10" Name="Button_6_4" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="6" Grid.Column="9" Width="40" Height="10" Name="Button_6_5" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="6" Grid.Column="10" Width="40" Height="10" Name="Button_6_6" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="6" Grid.Column="11" Width="40" Height="10" Name="Button_6_7" Click="DestinationButtons_Click"></Button>
+
+        <!-- row seven -->
+        <Slider Maximum="100" Grid.Row="7" Grid.Column="0" TickFrequency="5" Name="Slider7" ValueChanged="Slider7_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="7" Grid.Column="1" TickFrequency="5" Name="VolSlider7" ValueChanged="VolSlider7_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="7" Grid.Column="2" TickFrequency="5" Name="SeqSlider7" ValueChanged="SeqSlider7_ValueChanged"/>
+
+        <Button Grid.Row="7" Grid.Column="3" Width="40" Height="10" Name="Button_S_7" Click="SequencerButtons_Click"></Button>
+        <Button Grid.Row="7" Grid.Column="4" Width="40" Height="10" Name="Button_7_0" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="7" Grid.Column="5" Width="40" Height="10" Name="Button_7_1" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="7" Grid.Column="6" Width="40" Height="10" Name="Button_7_2" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="7" Grid.Column="7" Width="40" Height="10" Name="Button_7_3" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="7" Grid.Column="8" Width="40" Height="10" Name="Button_7_4" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="7" Grid.Column="9" Width="40" Height="10" Name="Button_7_5" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="7" Grid.Column="10" Width="40" Height="10" Name="Button_7_6" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="7" Grid.Column="11" Width="40" Height="10" Name="Button_7_7" Click="DestinationButtons_Click"></Button>
+
+
+        <!-- row eight-->
+        <Slider Maximum="100" Grid.Row="8" Grid.Column="0" TickFrequency="5" Name="Slider8" ValueChanged="Slider8_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="8" Grid.Column="1" TickFrequency="5" Name="VolSlider8" ValueChanged="VolSlider8_ValueChanged"/>
+        <Slider Maximum="100" Grid.Row="8" Grid.Column="2" TickFrequency="5" Name="SeqSlider8" ValueChanged="SeqSlider8_ValueChanged"/>
+
+        <Button Grid.Row="8" Grid.Column="3" Width="40" Height="10" Name="Button_S_8" Click="SequencerButtons_Click"></Button>
+        <Button Grid.Row="8" Grid.Column="4" Width="40" Height="10" Name="Button_8_0" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="8" Grid.Column="5" Width="40" Height="10" Name="Button_8_1" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="8" Grid.Column="6" Width="40" Height="10" Name="Button_8_2" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="8" Grid.Column="7" Width="40" Height="10" Name="Button_8_3" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="8" Grid.Column="8" Width="40" Height="10" Name="Button_8_4" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="8" Grid.Column="9" Width="40" Height="10" Name="Button_8_5" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="8" Grid.Column="10" Width="40" Height="10" Name="Button_8_6" Click="DestinationButtons_Click"></Button>
+        <Button Grid.Row="8" Grid.Column="11" Width="40" Height="10" Name="Button_8_7" Click="DestinationButtons_Click"></Button>
+
+    </Grid>
+</Window>
